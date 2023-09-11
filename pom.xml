@@ -130,18 +130,28 @@
 			</plugin>
 		</plugins>
 	</build>
-	<property name="src.dir"     value="src"/>
+<!--	<property name="src.dir"     value="src"/>-->
 
-	<property name="lib.dir"     value="${ocvJarDir}"/>
-	<path id="classpath">
-		<fileset dir="${lib.dir}" includes="**/*.jar"/>
-	</path>
+<!--	<property name="lib.dir"     value="${ocvJarDir}"/>-->
+<!--	<path id="classpath">-->
+<!--		<fileset dir="${lib.dir}" includes="**/*.jar"/>-->
+<!--	</path>-->
 
-	<property name="build.dir"   value="build"/>
-	<property name="classes.dir" value="${build.dir}/classes"/>
-	<property name="jar.dir"     value="${build.dir}/jar"/>
+<!--	<property name="build.dir"   value="build"/>-->
+<!--	<property name="classes.dir" value="${build.dir}/classes"/>-->
+<!--	<property name="jar.dir"     value="${build.dir}/jar"/>-->
 
-	<property name="main-class"  value="${ant.project.name}"/>
+<!--	<property name="main-class"  value="${ant.project.name}"/>-->
+
+	<properties>
+		<src.dir>src</src.dir>
+		<lib.dir>${ocvJarDir}</lib.dir>
+		<build.dir>build</build.dir>
+		<classes.dir>${build.dir}/classes</classes.dir>
+		<jar.dir>${build.dir}/jar</jar.dir>
+		<main.class>${ant.project.name}</main.class>
+	</properties>
+
 
 
 	<target name="clean">
