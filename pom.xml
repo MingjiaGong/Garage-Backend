@@ -155,36 +155,36 @@
 
 
 
-	<target name="clean">
-		<delete dir="${build.dir}"/>
-	</target>
+<!--	<target name="clean">-->
+<!--		<delete dir="${build.dir}"/>-->
+<!--	</target>-->
 
-	<target name="compile">
-		<mkdir dir="${classes.dir}"/>
-		<javac includeantruntime="false" srcdir="${src.dir}" destdir="${classes.dir}" classpathref="classpath"/>
-	</target>
+<!--	<target name="compile">-->
+<!--		<mkdir dir="${classes.dir}"/>-->
+<!--		<javac includeantruntime="false" srcdir="${src.dir}" destdir="${classes.dir}" classpathref="classpath"/>-->
+<!--	</target>-->
 
-	<target name="jar" depends="compile">
-		<mkdir dir="${jar.dir}"/>
-		<jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}">
-			<manifest>
-				<attribute name="Main-Class" value="${main-class}"/>
-			</manifest>
-		</jar>
-	</target>
+<!--	<target name="jar" depends="compile">-->
+<!--		<mkdir dir="${jar.dir}"/>-->
+<!--		<jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}">-->
+<!--			<manifest>-->
+<!--				<attribute name="Main-Class" value="${main-class}"/>-->
+<!--			</manifest>-->
+<!--		</jar>-->
+<!--	</target>-->
 
-	<target name="run" depends="jar">
-		<java fork="true" classname="${main-class}">
-			<sysproperty key="java.library.path" path="${ocvLibDir}"/>
-			<classpath>
-				<path refid="classpath"/>
-				<path location="${jar.dir}/${ant.project.name}.jar"/>
-			</classpath>
-		</java>
-	</target>
+<!--	<target name="run" depends="jar">-->
+<!--		<java fork="true" classname="${main-class}">-->
+<!--			<sysproperty key="java.library.path" path="${ocvLibDir}"/>-->
+<!--			<classpath>-->
+<!--				<path refid="classpath"/>-->
+<!--				<path location="${jar.dir}/${ant.project.name}.jar"/>-->
+<!--			</classpath>-->
+<!--		</java>-->
+<!--	</target>-->
 
-	<target name="rebuild" depends="clean,jar"/>
+<!--	<target name="rebuild" depends="clean,jar"/>-->
 
-	<target name="rebuild-run" depends="clean,run"/>
+<!--	<target name="rebuild-run" depends="clean,run"/>-->
 
 </project>
