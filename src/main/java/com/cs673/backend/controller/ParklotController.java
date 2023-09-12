@@ -17,7 +17,8 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://parking-garage-automation.netlify.app")
 @RequestMapping("/parklot")
 public class ParklotController {
     @Resource

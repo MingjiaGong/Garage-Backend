@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 public class
 MybatisPlusConfig {
 
-    // 最新版
+    //latest version
     @Bean
     public MybatisPlusInterceptor mybatisPlusInterceptor() {
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
